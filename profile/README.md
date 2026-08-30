@@ -9,22 +9,26 @@ fragment-level evidence for DIA — while **preserving tool-specific columns rat
 intersection across tools**. The result reads from Python, R, Julia, and JavaScript, and exports to
 Parquet or DuckDB.
 
-**APB** — the *AnnData Proteomics Bridge* — is the proteomics implementation of that spine. The
-organization is named for the wider scope, since it also holds a viewer, plasma reference data, and
-a FASTA library.
+**APB** — the *AnnData Proteomics Bridge* — is the proteomics implementation of that spine, and
+lives in [apb2](https://github.com/anndata-omics-bridge/apb2). The organization is named for the
+wider scope, since it also holds a viewer, plasma reference data, and a FASTA library.
 
 ## Repositories
 
 | Repository | What it is |
 | --- | --- |
-| [anndata-proteomics-bridge](https://github.com/anndata-omics-bridge/anndata-proteomics-bridge) | APB — converts quantification output tables to AnnData/MuData, with vendor parameter parsing and FASTA-driven annotation |
+| [apb2](https://github.com/anndata-omics-bridge/apb2) | APB — rules-driven conversion of quantification output tables to AnnData/MuData, with vendor parameter parsing and FASTA-driven annotation |
 | [prozor](https://github.com/anndata-omics-bridge/prozor) | Typed peptide-to-protein matching and deterministic greedy-parsimony protein inference |
 | [protein-fasta](https://github.com/anndata-omics-bridge/protein-fasta) | Streaming FASTA parsing, header interpretation, classification, and validation |
-| [abp_studio](https://github.com/anndata-omics-bridge/abp_studio) | Fixture manager and corpus runner that drives the APB CLI over real vendor files |
+| [abp_studio](https://github.com/anndata-omics-bridge/abp_studio) | ⚠️ **Down for refactoring.** Fixture manager and corpus runner that drives the APB CLI over real vendor files |
 | [visualiser-test](https://github.com/anndata-omics-bridge/visualiser-test) | Interactive browser viewer for the converted objects |
 | [plasma-ms](https://github.com/anndata-omics-bridge/plasma-ms) | Plasma QC reference material: datasets, quality-marker panels, and the metric catalogue |
 
-A rules-driven successor to APB is in development and will be published here.
+**`abp_studio` is down at the moment.** It is being refactored, its corpus runs are not expected to
+work in the meantime, and it should not be used as a starting point until this note goes away.
+
+`apb2` supersedes the original `anndata-proteomics-bridge`, which is now closed and kept only as a
+parity reference.
 
 ## Licensing
 
