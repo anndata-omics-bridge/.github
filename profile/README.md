@@ -17,7 +17,7 @@ wider scope, since it also holds a viewer, plasma reference data, and a FASTA li
 
 | Repository | What it is |
 | --- | --- |
-| [apb2](https://github.com/anndata-omics-bridge/apb2) | APB — rules-driven conversion of quantification output tables to AnnData/MuData, with vendor parameter parsing and FASTA-driven annotation |
+| [apb2](https://github.com/anndata-omics-bridge/apb2) | APB — rules-driven conversion of quantification output tables to AnnData/MuData, with vendor parameter parsing |
 | [prozor](https://github.com/anndata-omics-bridge/prozor) | Typed peptide-to-protein matching and deterministic greedy-parsimony protein inference |
 | [protein-fasta](https://github.com/anndata-omics-bridge/protein-fasta) | Streaming FASTA parsing, header interpretation, classification, and validation |
 | [abp_studio](https://github.com/anndata-omics-bridge/abp_studio) | ⚠️ **Down for refactoring.** Fixture manager and corpus runner that drives the APB CLI over real vendor files |
