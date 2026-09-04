@@ -7,7 +7,7 @@ Planning for anndata-omics-bridge started 2025 with discussion to use the same f
 Work on the anndata proteomics bridge (APB) started during the Copenhagen ProteoBench Hackathon, 13–17 April 2026, as part of changes to the [ProteoBench](https://proteobench.cubimed.rub.de/) backend. [ProteoBench](https://github.com/proteobench/proteobench) contains parsers for software-specific result tables, search-parameter files, and modification encodings for a dozen of quantification tools for DDA and DIA.  
 
 [APB2](https://github.com/anndata-omics-bridge/apb2) ports those parsers into a rules-driven converter and retains fields specific to each input tool.
-With apb-fasta and apb-proteobench we demonstrate how to build analysis pipelines using abp.
+With [apb-fasta](https://github.com/anndata-omics-bridge/protein-fasta) and [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench), we demonstrate how to build analysis pipelines using APB.
 
 See the ProteoBench preprint, [*ProteoBench: the community-curated platform for comparing proteomics data analysis workflows*](https://doi.org/10.64898/2025.12.09.692895).
 
