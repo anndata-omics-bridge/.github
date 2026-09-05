@@ -2,9 +2,9 @@
 
 What if you use the same data format when running proteomics, genomics, or metabolomics analyses, and program in Python, R, Rust, or JavaScript?
 
-Planning for anndata-omics-bridge started in 2025 with a discussion on anndata for proteomics, genomics, and metabolomics analysis at the FGCZ.
+Planning for __anndata-omics-bridge__ started in 2025 to use anndata for proteomics, genomics, and metabolomics analysis at the FGCZ.
 
-Work on the anndata proteomics bridge (APB) started during the Copenhagen ProteoBench Hackathon, 13–17 April 2026, as part of changes to the [ProteoBench](https://proteobench.cubimed.rub.de/) backend. [ProteoBench](https://github.com/proteobench/proteobench) contains parsers for software-specific result tables, search-parameter files, and modification encodings for a dozen quantification tools for DDA and DIA.  
+Work on the __anndata-proteomics-bridge__ (APB) started during the Copenhagen ProteoBench Hackathon, 13–17 April 2026, as part of changes to the [ProteoBench](https://proteobench.cubimed.rub.de/) backend. [ProteoBench](https://github.com/proteobench/proteobench) contains parsers for software-specific result tables, search-parameter files, and modification encodings for a dozen quantification tools for DDA and DIA.  
 
 [APB2](https://github.com/anndata-omics-bridge/apb2) ports those parsers into a rules-driven converter and retains fields specific to each input tool.
 With [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) and [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench), we demonstrate how to build analysis pipelines using APB.
