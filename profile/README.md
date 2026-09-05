@@ -1,17 +1,17 @@
 # anndata-omics-bridge
 
-What if you use the same data format when running proteomics, genomics or metabolomics analysis and either programming, with python, R, Rust of java script?
+What if you use the same data format when running proteomics, genomics, or metabolomics analyses, and program in Python, R, Rust, or JavaScript?
 
-Planning for anndata-omics-bridge started 2025 with discussion to use the same format anndata for proteomics, genomics and metabolomics analysis at the FGCZ.
+Planning for anndata-omics-bridge started in 2025 with a discussion on anndata for proteomics, genomics, and metabolomics analysis at the FGCZ.
 
-Work on the anndata proteomics bridge (APB) started during the Copenhagen ProteoBench Hackathon, 13–17 April 2026, as part of changes to the [ProteoBench](https://proteobench.cubimed.rub.de/) backend. [ProteoBench](https://github.com/proteobench/proteobench) contains parsers for software-specific result tables, search-parameter files, and modification encodings for a dozen of quantification tools for DDA and DIA.  
+Work on the anndata proteomics bridge (APB) started during the Copenhagen ProteoBench Hackathon, 13–17 April 2026, as part of changes to the [ProteoBench](https://proteobench.cubimed.rub.de/) backend. [ProteoBench](https://github.com/proteobench/proteobench) contains parsers for software-specific result tables, search-parameter files, and modification encodings for a dozen quantification tools for DDA and DIA.  
 
 [APB2](https://github.com/anndata-omics-bridge/apb2) ports those parsers into a rules-driven converter and retains fields specific to each input tool.
 With [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) and [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench), we demonstrate how to build analysis pipelines using APB.
 
 See the ProteoBench preprint, [*ProteoBench: the community-curated platform for comparing proteomics data analysis workflows*](https://doi.org/10.64898/2025.12.09.692895).
 
-The development of APB was further motivated by supporting vendor-specific readers in [`prolfquapp::preprocess_software()`](https://github.com/prolfqua/prolfquapp/blob/master/R/preprocess_software.R#L137) and [`prolfquappPTMreaders`](https://github.com/prolfqua/prolfquappPTMreaders), and the intention to transform it into an community effort.
+The development of APB was further motivated by supporting vendor-specific readers in [`prolfquapp::preprocess_software()`](https://github.com/prolfqua/prolfquapp/blob/master/R/preprocess_software.R#L137) and [`prolfquappPTMreaders`](https://github.com/prolfqua/prolfquappPTMreaders), and the intention to transform it into a community effort.
 
 
 ## APB tools
