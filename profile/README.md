@@ -19,7 +19,7 @@ The development of APB was further motivated by supporting vendor-specific reade
 | Repository | What it is | Documentation |
 | --- | --- | --- |
 | [apb2](https://github.com/anndata-omics-bridge/apb2) | APB — rules-driven conversion of quantification output tables to AnnData/MuData, with vendor parameter parsing | [docs](https://anndata-omics-bridge.github.io/apb2/) |
-| [apb-catalog](https://github.com/anndata-omics-bridge/apb-catalog) | Catalogues of what APB result fields mean, so consumers ask for a meaning instead of a vendor column: identification confidence and MIAPE-AnnData fields | [docs](https://anndata-omics-bridge.github.io/apb-catalog/) |
+| [apb-catalog](https://github.com/anndata-omics-bridge/apb-catalog) | Catalogues of what APB result fields mean, so consumers ask for a meaning instead of a vendor column: identification confidence, abundance, chromatography and ProteoBench entrapment fields | [docs](https://anndata-omics-bridge.github.io/apb-catalog/) |
 | [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) | FASTA verification and protein annotation for APB2 results | [docs](https://anndata-omics-bridge.github.io/apb-fasta/) |
 | [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench) | ProteoBench-specific annotation and scoring for APB results | [docs](https://anndata-omics-bridge.github.io/apb-proteobench/) |
 | [apb-export](https://github.com/anndata-omics-bridge/apb-export) | Exports of APB2 results as the AnnData and MuData files downstream tools read: msmu, prolfqua, ProteoPy and alphapepttools | [docs](https://anndata-omics-bridge.github.io/apb-export/) |
