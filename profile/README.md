@@ -11,7 +11,7 @@ With [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) and [apb-pro
 
 See the ProteoBench preprint, [*ProteoBench: the community-curated platform for comparing proteomics data analysis workflows*](https://doi.org/10.64898/2025.12.09.692895).
 
-The development of APB was further motivated by supporting vendor-specific readers in [`prolfquapp::preprocess_software()`](https://github.com/prolfqua/prolfquapp/blob/master/R/preprocess_software.R#L137) and [`prolfquappPTMreaders`](https://github.com/prolfqua/prolfquappPTMreaders), and the intention to transform it into a community effort.
+The development of APB was further motivated by supporting vendor-specific readers in [`prolfquapp::preprocess_software()`](https://github.com/prolfqua/prolfquapp/blob/44b32a931176eb722c24ba1b53a58b0281c11566/R/preprocess_software.R#L154) and [`prolfquappPTMreaders`](https://github.com/prolfqua/prolfquappPTMreaders), and the intention to transform it into a community effort.
 
 
 ## APB tools
@@ -20,12 +20,14 @@ The development of APB was further motivated by supporting vendor-specific reade
 | --- | --- | --- |
 | [apb2](https://github.com/anndata-omics-bridge/apb2) | APB — rules-driven conversion of quantification output tables to AnnData/MuData, with vendor parameter parsing | [docs](https://anndata-omics-bridge.github.io/apb2/) |
 | [apb-catalog](https://github.com/anndata-omics-bridge/apb-catalog) | Catalogues of what APB result fields mean, so consumers ask for a meaning instead of a vendor column: identification confidence, abundance, chromatography and ProteoBench entrapment fields | [docs](https://anndata-omics-bridge.github.io/apb-catalog/) |
+| [apbCatalogR](https://github.com/anndata-omics-bridge/apbCatalogR) | apb-catalog's API in R: look up APB result fields by meaning | [docs](https://anndata-omics-bridge.github.io/apbCatalogR/) |
 | [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) | FASTA verification and protein annotation for APB2 results | [docs](https://anndata-omics-bridge.github.io/apb-fasta/) |
 | [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench) | ProteoBench-specific annotation and scoring for APB results | [docs](https://anndata-omics-bridge.github.io/apb-proteobench/) |
-| [apb-export](https://github.com/anndata-omics-bridge/apb-export) | Exports of APB2 results as the AnnData and MuData files downstream tools read: msmu, prolfqua, ProteoPy and alphapepttools | [docs](https://anndata-omics-bridge.github.io/apb-export/) |
+| [apb-export](https://github.com/anndata-omics-bridge/apb-export) | Exports of APB2 results as the files downstream tools read: msmu, MSstats, Perseus, prolfqua, ProteoPy, exploreDE, alphapepttools, QFeatures and QPX | [docs](https://anndata-omics-bridge.github.io/apb-export/) |
+| [apb-export-ui](https://github.com/anndata-omics-bridge/apb-export-ui) | Web application for APB Export: upload a vendor table, choose a target, download the export | — |
+| [apb-pmultiqc](https://github.com/anndata-omics-bridge/apb-pmultiqc) | pMultiQC reports from stored APB results through the QPX export | — |
 | [apb-plasma](https://github.com/anndata-omics-bridge/apb-plasma) | Plasma MS quality control: reference datasets, quality-marker panels, and the QC metric catalogue | — |
-| [abp_studio](https://github.com/anndata-omics-bridge/abp_studio) | ⚠️ **Down for refactoring.** Fixture manager and corpus runner that drives the APB CLI over real vendor files | [docs](https://anndata-omics-bridge.github.io/abp_studio/) |
-| [visualiser-test](https://github.com/anndata-omics-bridge/visualiser-test) | Interactive browser viewer for the converted objects | — |
+| [abp_studio](https://github.com/anndata-omics-bridge/abp_studio) | Fixture manager and corpus runner that drives the APB CLI over real vendor files | [docs](https://anndata-omics-bridge.github.io/abp_studio/) |
 
 ## Infrastructure packages
 
@@ -39,12 +41,8 @@ The development of APB was further motivated by supporting vendor-specific reade
 | Repository | What it is | Documentation |
 | --- | --- | --- |
 | [anndata-omics-bridge](https://github.com/anndata-omics-bridge/anndata-omics-bridge) | Format specification and cross-project documentation | — |
-| [anndata-proteomics-bridge](https://github.com/anndata-omics-bridge/anndata-proteomics-bridge) | Archived APB v1 repository, retained as the parity reference for APB2 | [docs](https://anndata-omics-bridge.github.io/anndata-proteomics-bridge/) |
-
-**`abp_studio` is down at the moment.** It is being refactored, its corpus runs are not expected to
-work in the meantime, and it should not be used as a starting point until this note goes away.
+| [anndata-proteomics-bridge](https://github.com/anndata-omics-bridge/anndata-proteomics-bridge) | Archived APB v1 repository | [docs](https://anndata-omics-bridge.github.io/anndata-proteomics-bridge/) |
 
 ## Licensing
 
-**All code is MIT. Reference data is CC BY 4.0**, and third-party material keeps its own terms,
-recorded per file in the repository that vendors it.
+**All code is MIT, except the anndata-omics-bridge specification repository, which is CC BY 4.0. Reference data is CC BY 4.0**, and third-party material keeps its own terms, recorded per file in the repository that vendors it.
