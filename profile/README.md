@@ -17,7 +17,7 @@ With [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) and [apb-pro
 
 See the ProteoBench preprint, [*ProteoBench: the community-curated platform for comparing proteomics data analysis workflows*](https://doi.org/10.64898/2025.12.09.692895).
 
-The development of APB was further motivated by supporting vendor-specific readers in [`prolfquapp::preprocess_software()`](https://github.com/prolfqua/prolfquapp/blob/44b32a931176eb722c24ba1b53a58b0281c11566/R/preprocess_software.R#L154) and [`prolfquappPTMreaders`](https://github.com/prolfqua/prolfquappPTMreaders), and the intention to transform it into a community effort.
+The development of APB was further motivated by supporting vendor-specific readers in [`prolfquapp::preprocess_software()`](https://prolfqua.github.io/prolfquapp/man/preprocess_software.html) and [`prolfquappPTMreaders`](https://github.com/prolfqua/prolfquappPTMreaders), and the intention to transform it into a community effort.
 
 
 ## APB kernel
