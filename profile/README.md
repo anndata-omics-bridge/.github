@@ -36,7 +36,7 @@ The development of APB was further motivated by supporting vendor-specific reade
 | [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) | FASTA verification and protein annotation for APB2 results | [docs](https://anndata-omics-bridge.github.io/apb-fasta/) |
 | [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench) | ProteoBench-specific annotation and scoring for APB results | [docs](https://anndata-omics-bridge.github.io/apb-proteobench/) |
 | [apb-export](https://github.com/anndata-omics-bridge/apb-export) | Exports of APB2 results as the files downstream tools read: msmu, MSstats, Perseus, prolfqua, ProteoPy, exploreDE, alphapepttools, QFeatures and QPX | [docs](https://anndata-omics-bridge.github.io/apb-export/) |
-| [apb-export-ui](https://github.com/anndata-omics-bridge/apb-export-ui) | Web application for APB Export: upload a vendor table, choose a target, download the export | — |
+| [apb-export-ui](https://github.com/anndata-omics-bridge/apb-export-ui) | Web application for APB Export: upload a vendor table, choose a target, check its quality, download the export; [try it](https://apps-dev.bfabric.org/apb-export/) | [docs](https://anndata-omics-bridge.github.io/apb-export-ui/) |
 | [apb-pmultiqc](https://github.com/anndata-omics-bridge/apb-pmultiqc) | pMultiQC reports from stored APB results through the QPX export | — |
 | [apb-plasma](https://github.com/anndata-omics-bridge/apb-plasma) | Plasma MS quality control: reference datasets, quality-marker panels, and the QC metric catalogue | — |
 | [abp_studio](https://github.com/anndata-omics-bridge/abp_studio) | Fixture manager and corpus runner that drives the APB CLI over real vendor files | [docs](https://anndata-omics-bridge.github.io/abp_studio/) |
