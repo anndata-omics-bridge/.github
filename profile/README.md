@@ -13,6 +13,13 @@ The kernel of APB is two packages, side by side:
 
 ![Who does what: apb2 converts the results of quantification software into an APB result and the integrator fills the catalog; Bioconductor applications such as prolfqua, exploreDE and QFeatures read the result by meaning through the apb-catalog API, in R with apbCatalogR.](apb_actors.png)
 
+Browse online:
+
+- [Rules viewer](https://fgcz-ms.uzh.ch/public/apb-rules/): every vendor table's parse rules, as apb2 packages them
+- [Catalog viewer](https://fgcz-ms.uzh.ch/public/apb-catalog/): every catalog set with its entries and coverage
+- [APB Studio](https://fgcz-ms.uzh.ch/public/apb-studio/): APB's corpus runs over the test vendor files
+- [APB Export](https://apps-dev.bfabric.org/apb-export/): convert a vendor table for a downstream tool in the browser
+
 With [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) and [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench), we demonstrate how to build analysis pipelines using APB.
 
 See the ProteoBench preprint, [*ProteoBench: the community-curated platform for comparing proteomics data analysis workflows*](https://doi.org/10.64898/2025.12.09.692895).
