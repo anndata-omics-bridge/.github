@@ -6,7 +6,13 @@ Planning for __anndata-omics-bridge__ started in 2025 to use anndata for proteom
 
 Work on the __anndata-proteomics-bridge__ (APB) started during the Copenhagen ProteoBench Hackathon, 13–17 April 2026, as part of changes to the [ProteoBench](https://proteobench.cubimed.rub.de/) backend. [ProteoBench](https://github.com/proteobench/proteobench) contains parsers for software-specific result tables, search-parameter files, and modification encodings for a dozen quantification tools for DDA and DIA.  
 
-[APB2](https://github.com/anndata-omics-bridge/apb2) ports those parsers into a rules-driven converter and retains fields specific to each input tool.
+The kernel of APB is two packages, side by side:
+
+- [apb2](https://github.com/anndata-omics-bridge/apb2) ports those parsers into a rules-driven converter: the result tables of each quantification tool become one AnnData/MuData layout, which retains the fields specific to that tool.
+- [apb-catalog](https://github.com/anndata-omics-bridge/apb-catalog) records what those fields mean, so an application asks for a meaning, such as a PEP or an unnormalized intensity, instead of a vendor column. Its API exists in Python, in R as [apbCatalogR](https://github.com/anndata-omics-bridge/apbCatalogR), and in TypeScript as [apb-catalog-ts](https://github.com/anndata-omics-bridge/apb-catalog-ts).
+
+![Who does what: apb2 converts the results of quantification software into an APB result and the integrator fills the catalog; Bioconductor applications such as prolfqua, exploreDE and QFeatures read the result by meaning through the apb-catalog API, in R with apbCatalogR.](apb_actors.png)
+
 With [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) and [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench), we demonstrate how to build analysis pipelines using APB.
 
 See the ProteoBench preprint, [*ProteoBench: the community-curated platform for comparing proteomics data analysis workflows*](https://doi.org/10.64898/2025.12.09.692895).
@@ -14,13 +20,19 @@ See the ProteoBench preprint, [*ProteoBench: the community-curated platform for 
 The development of APB was further motivated by supporting vendor-specific readers in [`prolfquapp::preprocess_software()`](https://github.com/prolfqua/prolfquapp/blob/44b32a931176eb722c24ba1b53a58b0281c11566/R/preprocess_software.R#L154) and [`prolfquappPTMreaders`](https://github.com/prolfqua/prolfquappPTMreaders), and the intention to transform it into a community effort.
 
 
-## APB tools
+## APB kernel
 
 | Repository | What it is | Documentation |
 | --- | --- | --- |
 | [apb2](https://github.com/anndata-omics-bridge/apb2) | APB — rules-driven conversion of quantification output tables to AnnData/MuData, with vendor parameter parsing | [docs](https://anndata-omics-bridge.github.io/apb2/) |
 | [apb-catalog](https://github.com/anndata-omics-bridge/apb-catalog) | Catalogues of what APB result fields mean, so consumers ask for a meaning instead of a vendor column: identification confidence, abundance, chromatography and ProteoBench entrapment fields | [docs](https://anndata-omics-bridge.github.io/apb-catalog/) |
 | [apbCatalogR](https://github.com/anndata-omics-bridge/apbCatalogR) | apb-catalog's API in R: look up APB result fields by meaning | [docs](https://anndata-omics-bridge.github.io/apbCatalogR/) |
+| [apb-catalog-ts](https://github.com/anndata-omics-bridge/apb-catalog-ts) | apb-catalog's API in TypeScript, on npm as `@anndata-omics-bridge/apb-catalog`: look up APB result fields by meaning in the browser | [docs](https://anndata-omics-bridge.github.io/apb-catalog-ts/) |
+
+## APB tools
+
+| Repository | What it is | Documentation |
+| --- | --- | --- |
 | [apb-fasta](https://github.com/anndata-omics-bridge/apb-fasta) | FASTA verification and protein annotation for APB2 results | [docs](https://anndata-omics-bridge.github.io/apb-fasta/) |
 | [apb-proteobench](https://github.com/anndata-omics-bridge/apb-proteobench) | ProteoBench-specific annotation and scoring for APB results | [docs](https://anndata-omics-bridge.github.io/apb-proteobench/) |
 | [apb-export](https://github.com/anndata-omics-bridge/apb-export) | Exports of APB2 results as the files downstream tools read: msmu, MSstats, Perseus, prolfqua, ProteoPy, exploreDE, alphapepttools, QFeatures and QPX | [docs](https://anndata-omics-bridge.github.io/apb-export/) |
