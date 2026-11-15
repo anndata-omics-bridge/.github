@@ -8,7 +8,7 @@ Work on the __anndata-proteomics-bridge__ (APB) started during the Copenhagen Pr
 
 The kernel of APB is two packages, side by side:
 
-- [apb2](https://github.com/anndata-omics-bridge/apb2) ports those parsers into a rules-driven converter: the result tables of each quantification tool become one AnnData/MuData layout, which retains the fields specific to that tool.
+- [apb2](https://github.com/anndata-omics-bridge/apb2) ports those parsers into a rules-driven converter: the result tables of each quantification tool become one AnnData/MuData layout, which retains the fields specific to that tool. It reads AlphaDIA, DIA-NN, FragPipe, MaxQuant, Spectronaut and [9 more](https://anndata-omics-bridge.github.io/apb2/supported_software/).
 - [apb-catalog](https://github.com/anndata-omics-bridge/apb-catalog) records what those fields mean, so an application asks for a meaning, such as a PEP or an unnormalized intensity, instead of a vendor column. Its API exists in Python, in R as [apbCatalogR](https://github.com/anndata-omics-bridge/apbCatalogR), and in TypeScript as [apb-catalog-ts](https://github.com/anndata-omics-bridge/apb-catalog-ts).
 
 ![Who does what: apb2 converts the results of quantification software into an APB result and the integrator fills the catalog; Bioconductor applications such as prolfqua, exploreDE and QFeatures read the result by meaning through the apb-catalog API, in R with apbCatalogR.](apb_actors.png)
